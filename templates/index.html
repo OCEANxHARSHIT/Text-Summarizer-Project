@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Text Summarizer</title>
+</head>
+<body>
+    <h1>Enter Text to Summarize</h1>
+    <form method="post" action="/summarize">
+        <textarea name="text" rows="10" cols="50" placeholder="Paste your text here..."></textarea><br><br>
+        <input type="submit" value="Summarize">
+    </form>
+
+    {% if summary %}
+        <h2>Original Text:</h2>
+        <p>{{ original }}</p>
+
+        <h2>Summary:</h2>
+        <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
